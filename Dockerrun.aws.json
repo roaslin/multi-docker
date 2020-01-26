@@ -18,7 +18,7 @@
         {
             "name": "worker",
             "image": "roaslin/multi-worker",
-            "hostname": "worker ",
+            "hostname": "worker",
             "essential": false,
             "memory": 128
         },
