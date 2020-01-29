@@ -1,7 +1,13 @@
 {
     "AWSEBDockerrunVersion": 2,
     "containerDefinitions": [
-
+        {
+            "name": "client",
+            "image": "roaslin/multi-client",
+            "hostname": "client",
+            "essential": false,
+            "memory": 128
+        },
         {
             "name": "server",
             "image": "roaslin/multi-server",
@@ -28,6 +34,7 @@
                 }
             ],
             "links": [
+                "client",
                 "server"
             ],
             "memory": 128
